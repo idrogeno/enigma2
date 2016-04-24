@@ -114,10 +114,10 @@ class About(Screen):
 			})
 
 	def populate(self):
-		self["lab1"] = StaticText(_("openATV"))
-		self["lab2"] = StaticText(_("By openATV Image Team"))
+		self["lab1"] = StaticText(_("Fusion"))
+		self["lab2"] = StaticText(_("Fusion Team"))
 		model = None
-		self["lab3"] = StaticText(_("Support at") + " www.opena.tv")
+		self["lab3"] = StaticText(_("Support at") + " www.fusion.com")
 
 		AboutText = getAboutText()[0]
 
@@ -262,8 +262,8 @@ class SystemMemoryInfo(Screen):
 		Screen.__init__(self, session)
 		Screen.setTitle(self, _("Memory Information"))
 		self.skinName = ["SystemMemoryInfo", "About"]
-		self["lab1"] = StaticText(_("openATV"))
-		self["lab2"] = StaticText(_("By openATV Image Team"))
+		self["lab1"] = StaticText(_("FusionOE"))
+		self["lab2"] = StaticText(_("Fusion Team"))
 		self["AboutScrollLabel"] = ScrollLabel()
 
 		self["actions"] = ActionMap(["SetupActions", "ColorActions"],
@@ -530,7 +530,7 @@ class SystemNetworkInfo(Screen):
 class AboutSummary(Screen):
 	def __init__(self, session, parent):
 		Screen.__init__(self, session, parent=parent)
-		self["selected"] = StaticText("openATV:" + getImageVersion())
+		self["selected"] = StaticText("FusionOE:" + getImageVersion())
 
 		AboutText = getAboutText()[1]
 
@@ -582,7 +582,7 @@ class ViewGitLog(Screen):
 		fd = open('/etc/' + self.logtype + '-git.log', 'r')
 		releasenotes = fd.read()
 		fd.close()
-		releasenotes = releasenotes.replace('\nopenatv: build', "\n\nopenatv: build")
+		releasenotes = releasenotes.replace('\nfusion: build', "\n\nfusion: build")
 		self["text"].setText(releasenotes)
 		summarytext = releasenotes
 		try:

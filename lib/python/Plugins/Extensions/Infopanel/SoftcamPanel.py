@@ -180,7 +180,7 @@ class SoftcamPanel(ConfigListScreen, Screen):
 		self.onLayoutFinish.append(self.layoutFinished)
 
 	def setWindowTitle(self):
-		self.setTitle(_("Softcam Panel V2.0"))
+		self.setTitle(_("Fusion Panel V2.0"))
 
 	def ReadMenu(self):
 		self.whichCam()
