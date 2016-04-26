@@ -18,7 +18,7 @@ import commands
 import datetime
 from boxbranding import getBoxType, getMachineBrand, getMachineName, getDriverDate, getImageVersion, getImageBuild, getBrandOEM, getMachineBuild, getImageFolder, getMachineUBINIZE, getMachineMKUBIFS, getMachineMtdKernel, getMachineKernelFile, getMachineRootFile, getImageFileSystem
 
-VERSION = "Version 5.3 openATV"
+VERSION = "Version 1.0 Fusion"
 
 HaveGZkernel = True
 if getBrandOEM() in ("fulan") or getBoxType() in ("vusolo4k"):
@@ -380,8 +380,8 @@ class ImageBackup(Screen):
 
 	def imageInfo(self):
 		AboutText = _("Full Image Backup ")
-		AboutText += _("By openATV Image Team") + "\n"
-		AboutText += _("Support at") + " www.opena.tv\n\n"
+		AboutText += _("By Fusion Image Team") + "\n"
+		AboutText += _("Support at") + " www.fusion.com\n\n"
 		AboutText += _("[Image Info]\n")
 		AboutText += _("Model: %s %s\n") % (getMachineBrand(), getMachineName())
 		AboutText += _("Backup Date: %s\n") % strftime("%Y-%m-%d", localtime(self.START))
