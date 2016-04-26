@@ -125,7 +125,7 @@ class QuickMenu(Screen, ProtectedScreen):
 		Screen.__init__(self, session)
 		if config.ParentalControl.configured.value:
 			ProtectedScreen.__init__(self)
-		Screen.setTitle(self, _("Quick Launch Menu"))
+		Screen.setTitle(self, _("Fusion Menu"))
 		ProtectedScreen.__init__(self)
 
 		self["key_red"] = Label(_("Exit"))
